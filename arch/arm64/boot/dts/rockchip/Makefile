@@ -91,5 +91,12 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-rk806-single-v10.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-v10.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-v11.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-fydetab-duo.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-cp4.dtb
+#dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-8uart.dtb
+#dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-minipc.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-evb.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-evb-v11.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-notebook.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-cpcm5-notebook-v20.dtb
 
 subdir-y := $(dts-dirs) overlay
