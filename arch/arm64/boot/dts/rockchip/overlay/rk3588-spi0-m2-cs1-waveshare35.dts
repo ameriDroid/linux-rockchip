@@ -3,18 +3,18 @@
 
 / {
   metadata {
-    title = "Enable Waveshare 3.5inch RPi LCD (C) on SPI0-M0";
+    title = "Enable Waveshare 3.5inch RPi LCD (C) on SPI0-M2";
     compatible = "radxa,cm5-io";
     category = "misc";
     exclusive = "GPIO1_B1", "GPIO1_D5", "GPIO4_A0", "GPIO4_A1", "GPIO4_A2", "GPIO4_A6", "GPIO4_B2" ;
-    description = "Enable Waveshare 3.5inch RPi LCD (C) on SPI0-M0.
+    description = "Enable Waveshare 3.5inch RPi LCD (C) on SPI0-M2.
 Touch is temporarily unavailable.";
   };
 };
 
 &DISPLAY_SPI {
   pinctrl-names = "default";
-  pinctrl-0 = <&spi0m1_cs0 &spi0m1_pins>;
+  pinctrl-0 = <&spi0m2_cs1 &spi0m2_pins>;
 };
 
 &ili9486 {
