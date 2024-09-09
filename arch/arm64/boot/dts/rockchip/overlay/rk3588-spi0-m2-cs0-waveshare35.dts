@@ -18,7 +18,7 @@ Touch is temporarily unavailable.";
 };
 
 &ili9486 {
-  reset-gpios = <&gpio1 RK_PB5 GPIO_ACTIVE_LOW>; // GPIO1_B0
+  reset-gpios = <&gpio1 RK_PB0 GPIO_ACTIVE_LOW>; // GPIO1_B0
   dc-gpios = <&gpio1 RK_PC2 GPIO_ACTIVE_HIGH>; // GPIO1_C2
 };
 
