@@ -302,7 +302,8 @@ dtbo-$(CONFIG_ARCH_ROCKCHIP) += \
 	rk3568-w1-gpio3-d1.dtbo \
 	rockchip-rk3588-panthor-gpu.dtbo \
 	rk3568-spi3-m1-cs0-waveshare35.dtbo \
-	rk3588-spi0-m2-cs1-waveshare35.dtbo
+	rk3588-spi0-m2-cs1-waveshare35.dtbo \
+	rk3588-spi0-m1-cs0-waveshare35.dtbo
 
 dtbotxt-$(CONFIG_ARCH_ROCKCHIP) += \
 	README.rockchip-overlays
