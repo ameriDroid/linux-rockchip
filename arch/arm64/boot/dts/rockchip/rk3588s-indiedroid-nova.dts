@@ -6,6 +6,7 @@
 #include <dt-bindings/input/linux-event-codes.h>
 #include <dt-bindings/pinctrl/rockchip.h>
 #include <dt-bindings/usb/pd.h>
+#include <dt-bindings/soc/rockchip,vop2.h>
 #include "rk3588s.dtsi"
 
 / {
@@ -69,6 +70,16 @@
 			  "Headphones", "LOUT1",
 			  "Headphones", "ROUT1";
 		dais = <&i2s0_8ch_p0>;
+	};
+
+	hdmi0-con {
+		compatible = "hdmi-connector";
+		type = "a";
+		port {
+			hdmi0_con_in: endpoint {
+				remote-endpoint = <&hdmi0_out_con>;
+			};
+		};
 	};
 
 	vbus5v0_typec: vbus5v0-typec-regulator {
@@ -894,6 +905,36 @@
 
 &usb_host2_xhci {
 	status = "okay";
+};
+
+&hdptxphy_hdmi0 {
+	status = "okay";
+};
+&hdmi0 {
+	enable-gpios = <&gpio4 RK_PB6 GPIO_ACTIVE_HIGH>;
+	status = "okay";
+};
+&hdmi0_in {
+	hdmi0_in_vp0: endpoint {
+		remote-endpoint = <&vp0_out_hdmi0>;
+	};
+};
+&hdmi0_out {
+	hdmi0_out_con: endpoint {
+		remote-endpoint = <&hdmi0_con_in>;
+	};
+};
+&vop {
+	status = "okay";
+};
+&vop_mmu {
+	status = "okay";
+};
+&vp0 {
+	vp0_out_hdmi0: endpoint@ROCKCHIP_VOP2_EP_HDMI0 {
+		reg = <ROCKCHIP_VOP2_EP_HDMI0>;
+		remote-endpoint = <&hdmi0_in_vp0>;
+	};
 };
 
 &usbdp_phy0 {
