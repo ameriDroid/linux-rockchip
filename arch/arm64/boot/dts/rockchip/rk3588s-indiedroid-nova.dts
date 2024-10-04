@@ -937,6 +937,11 @@
 	};
 };
 
+&gpu {
+	mali-supply = <&vdd_gpu_s0>;
+	status = "okay";
+};
+
 &usbdp_phy0 {
 	orientation-switch;
 	mode-switch;
