@@ -185,7 +185,10 @@ endif
 
 ifeq ($(do_dtbs),true)
 	$(build_cd) $(kmake) $(build_O) $(conc_level) dtbs_install \
-		INSTALL_DTBS_PATH=$(pkgdir)/lib/firmware/$(abi_release)-$*/device-tree
+		INSTALL_DTBS_PATH=$(pkgdir)/boot/$(abi_release)-$*/dtbs
+	mkdir -p $(pkgdir)/lib/firmware/$(abi_release)-$*/
+	ln -s /boot/$(abi_release)-$*/dtbs $(pkgdir)/boot/dtbs-6.1.0-rockchip
+	ln -s /boot/$(abi_release)-$*/dtbs $(pkgdir)/lib/firmware/$(abi_release)-$*/device-tree
 endif
 
 ifeq ($(no_dumpfile),)
